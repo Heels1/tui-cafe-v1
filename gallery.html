@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <title>Tui Café - Gallery</title>
+  </head>
+  <body>
+    <header>
+      <div class="container row">
+        <nav class="navbar">
+          <div class="logo">
+            <h4>Tui's Café</h4>
+          </div>
+          <ul class="nav-links">
+            <li><a class="nav-item" href="./index.html">Home</a></li>
+            <li><a class="nav-item" href="./about.html">About</a></li>
+            <li><a class="nav-item" href="./contact.html">Contact</a></li>
+            <li><a class="nav-item" href="./menu.html">Menu</a></li>
+            <li><a class="nav-item" href="#">Gallery</a></li>
+          </ul>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section>
+      <h1 class="main-title">Gallery</h1>
+      <p class="main-sub-title">Tawhanga whakaahua</p>
+      <div class="slide-container">
+<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="img/pexels-brett-jordan-2297961.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="img/greenhill.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="img/pexels-josiah-farrow-3686883.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="img/pexels-viktoria-alipatova-2074122.jpg" alt=""></div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+</div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    </section>
+    <footer class="footer">
+      <div class="grid-container">
+        <div class="col-1">
+          <h3 class="footer-title">LINKS</h3>
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About Us</a>
+          <a href="./contact.html">Contact Us</a>
+          <a href="./menu.html">Menu</a>
+          <a href="#">Gallery</a>
+        </div>
+        <div class="col-2">
+          <h3 class="footer-title">FOLLOW US</h3>
+          <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://www.twitter.com" target="_blank"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <div class="motto">
+              <p>Whangaihia to tinana ki te kai organic</p>
+              </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <h3 class="footer-title">CONTACT US</h3>
+          <p>97 Western Hills Drive,</p>
+          <p>Kensington,</p>
+          <p>Whangarei 0112</p>
+          <br />
+          <p>Phone: 09 438 9563</p>
+          <p>Email: <a id="email-add" href="#">admin@tuicafe.co.nz</a></p>
+        </div>
+      </div>
+    </footer>
+    <script defer src="./main.js"></script>
+  </body>
+</html>

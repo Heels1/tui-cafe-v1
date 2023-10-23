@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <title>Tui Café - Contact</title>
+  </head>
+  <body>
+    <header>
+      <div class="container row">
+        <nav class="navbar">
+          <div class="logo">
+            <h4>Tui's Café</h4>
+          </div>
+          <ul class="nav-links">
+            <li><a class="nav-item" href="./index.html">Home</a></li>
+            <li><a class="nav-item" href="./about.html">About</a></li>
+            <li><a class="nav-item" href="#">Contact</a></li>
+            <li><a class="nav-item" href="./menu.html">Menu</a></li>
+            <li><a class="nav-item" href="./gallery.html">Gallery</a></li>
+          </ul>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container row mobile">
+        <h1 class="main-title">Contact Us</h1>
+        <p class="main-sub-title">Me pehea te whakapa mai</p>
+        <div class="cafe-location">
+          <iframe
+            class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.739096229439!2d174.31273529999999!3d-35.708037499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0b7ed8918ad62b%3A0x59fbe08246f89153!2s97%20Western%20Hills%20Drive%2C%20Kensington%2C%20Whang%C4%81rei%200112!5e0!3m2!1sen!2snz!4v1696593133296!5m2!1sen!2snz"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+    <section class="form-container mobile">
+      <h1>CONTACT US</h1>
+      <p>Please drop us a line if you have any questions or suggestions</p>
+      <form class="form">
+        <div class="form-row">
+          <div class="form-column">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Your name here"
+              autocomplete="name" />
+          </div>
+          <div class="form-column">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Your email here"
+              autocomplete="email" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-column">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="Your subject here" />
+          </div>
+          <div class="form-column">
+            <label for="contact">Contact Number</label>
+            <input
+              type="tel"
+              id="contact"
+              placeholder="Your phone number here" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-column">
+            <label for="issue">Describe your issue</label>
+            <textarea
+              id="issue"
+              placeholder="Describe your issue in detail here"
+              rows="3"></textarea>
+          </div>
+        </div>
+        <button>Submit</button>
+      </form>
+    </section>
+    <footer class="footer">
+      <div class="grid-container">
+        <div class="col-1">
+          <h3 class="footer-title">LINKS</h3>
+          <a href="./index.html">Home</a>
+          <a href="#">Contact Us</a>
+          <a href="./menu.html">Menu</a>
+          <a href="./gallery.html">Gallery</a>
+        </div>
+        <div class="col-2">
+          <h3 class="footer-title">FOLLOW US</h3>
+          <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://www.twitter.com" target="_blank"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <div class="motto">
+              <p>Whangaihia to tinana ki te kai organic</p>
+              </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <h3 class="footer-title">CONTACT US</h3>
+          <p>97 Western Hills Drive,</p>
+          <p>Kensington,</p>
+          <p>Whangarei 0112</p>
+          <br />
+          <p>Phone: 09 438 9563</p>
+          <p>Email: <a id="email-add" href="#">admin@tuicafe.co.nz</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script defer src="./main.js"></script>
+  </body>
+</html>
