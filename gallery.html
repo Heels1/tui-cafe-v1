@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta information -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="view-transition" content="same-origin" />
+    <!-- External CSS links -->
     <link rel="stylesheet" href="./styles.css" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- Page title -->
     <title>Tui Café - Gallery</title>
   </head>
   <body>
-    <header>
+    <header class="header">
+      <!-- Header container with navigation and logo -->
       <div class="container row">
         <nav class="navbar">
           <div class="logo">
             <h4>Tui's Café</h4>
           </div>
+          <!-- Navigation links -->
           <ul class="nav-links">
             <li><a class="nav-item" href="./index.html">Home</a></li>
             <li><a class="nav-item" href="./about.html">About</a></li>
@@ -27,6 +29,7 @@
             <li><a class="nav-item" href="./menu.html">Menu</a></li>
             <li><a class="nav-item" href="#">Gallery</a></li>
           </ul>
+          <!-- Burger menu icon for mobile -->
           <div class="burger">
             <div class="line1"></div>
             <div class="line2"></div>
@@ -36,30 +39,42 @@
       </div>
     </header>
     <section>
+      <!-- Main title section -->
       <h1 class="main-title">Gallery</h1>
       <p class="main-sub-title">Tawhanga whakaahua</p>
       <div class="slide-container">
-<!-- Slider main container -->
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide"><img src="img/pexels-brett-jordan-2297961.jpg" alt=""></div>
-    <div class="swiper-slide"><img src="img/greenhill.jpg" alt=""></div>
-    <div class="swiper-slide"><img src="img/pexels-josiah-farrow-3686883.jpg" alt=""></div>
-    <div class="swiper-slide"><img src="img/pexels-viktoria-alipatova-2074122.jpg" alt=""></div>
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="img/pexels-brett-jordan-2297961.jpg" alt="breakfast meal" title="eggs and benidict"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/greenhill.jpg" alt="green hill with sheep" title="green hill"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/pexels-josiah-farrow-3686883.jpg" alt="waterfall in the forest" title="waterfall"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/pexels-viktoria-alipatova-2074122.jpg" alt="coffee and cookies" title="coffee & cookies"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/pexels-alex-favali-921374.jpg" alt="seashell meal" title="seashell dish"/>
+            </div>
+          </div>
+          <!-- use of pagination -->
+          <div class="swiper-pagination"></div>
 
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
-</div>
+          <!-- navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
       </div>
       <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     </section>
+    <!-- footer section -->
     <footer class="footer">
       <div class="grid-container">
         <div class="col-1">
@@ -71,6 +86,7 @@
           <a href="#">Gallery</a>
         </div>
         <div class="col-2">
+          <!-- Social media links and motto -->
           <h3 class="footer-title">FOLLOW US</h3>
           <div class="social-media">
             <a href="https://www.facebook.com" target="_blank"
@@ -83,11 +99,12 @@
               ><i class="fa-brands fa-x-twitter"></i
             ></a>
             <div class="motto">
-              <p>Whangaihia to tinana ki te kai organic</p>
-              </div>
+              <p>Whāngaihia to tinana ki te kai organic</p>
+            </div>
           </div>
         </div>
         <div class="col-3">
+          <!-- Contact information -->
           <h3 class="footer-title">CONTACT US</h3>
           <p>97 Western Hills Drive,</p>
           <p>Kensington,</p>
@@ -97,7 +114,18 @@
           <p>Email: <a id="email-add" href="#">admin@tuicafe.co.nz</a></p>
         </div>
       </div>
+      <div class="copyRight">
+        <!-- Copyright information -->
+        <p>
+          <span>Copyright &#169; 2023 </span>Tui Café Limited<span>
+            All rights reserved.</span
+          >
+        </p>
+      </div>
     </footer>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script defer src="./main.js"></script>
   </body>
 </html>

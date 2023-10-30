@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Style+Script&display=swap");
 
+/* Resets */
 *,
 *:before,
 *:after {
@@ -8,12 +9,10 @@
   box-sizing: border-box;
 }
 
+/* Set 1rem = 16px */
 html {
   font-size: 16px;
 }
-
-/* Display: flex, flex-direction columnm min-height 100vh to allow
-footer to display at the bottom of the page   */
 
 body {
   font-family: "Poppins", sans-serif;
@@ -22,27 +21,15 @@ body {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  background: url("img/green\ trees.jpg") no-repeat center fixed;
+  background: url("img/pexels-ferns.jpg") no-repeat center fixed;
   background-size: cover;
+  animation: fade-in 0.7s; /* Page transition fade-in*/
 }
 
-body {
-  animation: pageTransition 0.7s;
-}
-
-@keyframes pageTransition {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
+/* Navigation and logo */
 .container {
   width: 80%;
-  max-width: 1128px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -53,7 +40,7 @@ body {
   min-height: 8vh;
 }
 
-header {
+.header {
   background-color: #ffe8d6;
 }
 
@@ -105,24 +92,36 @@ header {
   transition: all 0.3s ease;
 }
 
+/* This allows the animation of the hamburger - changes from hamburger
+to an X */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
 .main-sub-title {
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   margin: 0 auto;
   margin-bottom: 30px;
   color: #fff;
-  /* background-color: #222; */
   font-weight: 400;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  /* opacity: .8; */
   width: 40%;
   padding: 5px 0;
 }
 
 .main-title-message {
   color: #fff;
-  text-align: center;
+  text-align: justify;
   font-size: 1.5rem;
   font-weight: 400;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -130,13 +129,6 @@ header {
   width: 80%;
   margin: 0 auto;
   margin-bottom: 50px;
-}
-
-.motto {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-weight: 500;
-  font-size: 1.1rem;
 }
 
 .main-title {
@@ -149,32 +141,104 @@ header {
   margin-bottom: 20px;
 }
 
-.main-photo {
-  display: flex;
+.main-image {
   max-width: 100%;
 }
 
-.main-photo img {
+.main-image img {
   display: block;
   margin: 0 auto;
-  width: 100%;
+  width: 80%;
+  max-width: 1400px;
   margin-bottom: 50px;
   border-radius: 5px;
 }
 
-.cafe-location {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  margin-bottom: 30px;
-  border-radius: 5px;
+.footer {
+  margin-top: 50px;
+  min-height: 200px;
+  background-color: #ffe8d6;
+  padding-top: 10px;
+  margin-top: auto;
+}
+
+.footer-title {
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+.footer .col-1 a {
+  text-decoration: none;
+  color: rgb(78, 70, 70);
+}
+
+.footer .col-1 a:hover,
+.footer .col-1 a:focus {
+  color: green;
+  font-weight: 600;
+}
+
+.footer .col-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.copyRight {
+  text-align: center;
+  padding-bottom: 10px;
+  color: #222;
+}
+
+.copyRight span {
+  color: #777;
+}
+
+.social-media a {
+  margin: 0 10px 10px 0;
+  font-size: 20px;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.social-media a:hover,
+.social-media a:focus,
+#email-add:hover,
+#email-add:focus {
+  color: green;
+}
+
+.motto {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.col-3 {
+  color: rgb(78, 70, 70);
+}
+
+#email-add {
+  text-decoration: none;
+  color: rgb(78, 70, 70);
+  font-weight: 500;
 }
 
 /* About Page */
 
+.ourteam {
+  padding-top: 50px;
+}
+
 .grid-container {
   width: 80%;
-  max-width: 1128px;
+  max-width: 1400px;
   margin: 0px auto;
   margin-bottom: 50px;
   display: grid;
@@ -183,16 +247,18 @@ header {
   gap: 20px;
 }
 
-.grid-container .col-1 {
-  grid-column: 1 / span 1;
+.about-video {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 56%;
 }
 
-.grid-container .col-2 {
-  grid-column: 2 / span 1;
-}
-
-.grid-container > .col-3 {
-  grid-column: 3 / span 1;
+.about-video > iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .grid-container img {
@@ -200,19 +266,6 @@ header {
   width: 100%;
   object-fit: cover;
   border-radius: 5px;
-}
-
-.col-2 {
-  text-align: center;
-}
-
-.mid-col {
-  background-color: #222;
-  opacity: 0.9;
-}
-
-.col-3 {
-  text-align: end;
 }
 
 .mid-col h3,
@@ -243,8 +296,10 @@ header {
   font-size: 4rem;
   color: #fff;
   font-weight: 400;
+  margin-top: 50px;
 }
 
+/* Add line below Our Team*/
 .bottom-section h2::after,
 .main-title::after {
   content: "";
@@ -257,42 +312,59 @@ header {
   background-color: green;
 }
 
-.grid-container-bottom {
+.container-ourTeam {
+  margin: 0 auto;
+  color: #fff;
   width: 80%;
-  max-width: 1128px;
-  margin: 50px auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: space-between;
-  gap: 50px;
+  max-width: 1400px;
+}
+
+.ourTeam-heading {
+  font-size: 3.75rem;
   color: #fff;
 }
 
-.grid-container-bottom-article {
-  padding: 25px 25px;
-  line-height: 2;
+.ourTeam-profiles {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
 }
 
-.grid-container-bottom-article h3 {
-  font-size: 1.75rem;
+.ourTeam-profile {
+  flex-basis: 16.25rem;
 }
 
-.grid-container-bottom-article p {
+.ourTeam-profile .ourTeam-image {
+  height: 20rem;
+  width: 20rem;
+  margin: 1.25rem 0;
+  border-radius: 50%;
+}
+
+.ourTeam-image:hover {
+  filter: grayscale(50%);
+  cursor: pointer;
+}
+
+.ourTeam-username {
+  font-size: 2.19rem;
+}
+
+.ourTeam-title {
   font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #fff;
 }
 
-.grid-container-bottom-image {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-}
-
-.grid-container-bottom-image img {
-  width: 100%;
-  height: 100%;
+.ourTeam-profile {
+  font-size: 1rem;
+  margin-top: 1.25rem;
+  text-align: justify;
+  font-weight: 400;
 }
 
 /* Contact Page */
@@ -300,76 +372,24 @@ header {
 .map {
   width: 100%;
   margin: 0 auto;
-  max-width: 1128px;
+  max-width: 1400px;
   margin-bottom: 20px;
   border-radius: 5px;
 }
 
-.footer {
-  margin-top: 50px;
-  min-height: 200px;
-  background-color: #ffe8d6;
-  padding-top: 10px;
-  margin-top: auto;
-}
-
-.footer-title {
-  font-weight: 500;
-  padding-bottom: 5px;
-}
-
-.footer .col-1 a {
-  /* transition: all 0.5 ease; */
-  text-decoration: none;
-  color: rgb(78, 70, 70);
-}
-
-.footer .col-1 a:hover,
-.footer .col-1 a:focus {
-  color: green;
-  font-weight: 600;
-}
-
-.footer .col-1 {
-  display: flex;
-  flex-direction: column;
-}
-
-.social-media a {
-  margin: 0 10px 10px 0;
-  font-size: 20px;
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  background-color: black;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 50px;
-  color: #fff;
-}
-
-.social-media a:hover,
-.social-media a:focus,
-#email-add:hover,
-#email-add:focus {
-  color: green;
-}
-
-.col-3 {
-  color: rgb(78, 70, 70);
-}
-
-#email-add {
-  text-decoration: none;
-  color: rgb(78, 70, 70);
-  font-weight: 500;
+.cafe-location {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 5px;
 }
 
 /* Menu Page*/
 
 .wrapper {
   width: 80%;
-  max-width: 1128px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -380,9 +400,6 @@ header {
   text-align: center;
   padding: 20px 0px;
   color: #fff;
-  /* gap: 5px; */
-  background-color: #222;
-  opacity: 0.9;
   margin-bottom: 50px;
 }
 
@@ -396,8 +413,6 @@ header {
   font-size: 2.5rem;
   margin-bottom: 10px;
   font-weight: 400;
-
-  /* border-bottom: 2px solid green; */
 }
 
 hr {
@@ -422,104 +437,8 @@ hr {
   margin-bottom: 10px;
 }
 
-.grid-container-bottom-article {
-  background-color: #222;
-  opacity: 0.9;
-}
 
-/* I have taken the opportunty to use a new API called view-transition
-which allows smoother transitions between pages using only the API
-and css. This has to be activated in the browser. Chrome and Edge 
-fully support this API at the moment. To activate you need to access
-the chrome://flags, then search for view transition and enable bothe the 
-viewTransition API, and the viewTransition API for navigations*/
-
-/* Below are some @keyframes that I have experimented with, and comment out
-and settled on a set that I am happy with */
-
-/* @keyframes slide-left {
-  from {
-    left: 0%;
-  }
-  to {
-    left: -100%;
-  }
-}
-
-@keyframes slide-right {
-  from {
-    left: 100%;
-  }
-  to {
-    left: 0%;
-  }
-}
-
-::view-transition-old(root) {
-  animation-name: slide-left;
-}
-
-::view-transition-new(root) {
-  animation-name: slide-right;
-} */
-
-@keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slide-to-left {
-  from {
-    transform: translateX(-4rem);
-  }
-  to {
-    transform: translateX(0rem);
-  }
-}
-
-@keyframes slide-to-right {
-  from {
-    transform: translateX(4rem);
-  }
-  to {
-    transform: translateX(0rem);
-  }
-}
-
-/* ::view-transition-old(root) {
-  animation: fadeout 350ms cubic-bezier(0, 0, 0.2, 1),
-    slide-to-right 350ms cubic-bezier(0, 0, 0.2, 1);
-}
-
-::view-transition-new(root) {
-  animation: fade-in 350ms cubic-bezier(0, 0, 0.2, 1),
-    slide-to-left 350ms cubic-bezier(0, 0, 0.2, 1);
-  mix-blend-mode: normal;
-} */
-
-::view-transition-old(root) {
-  animation: fadeout 350ms cubic-bezier(0, 0, 0.2, 1);
-}
-
-::view-transition-new(root) {
-  animation: fade-in 350ms cubic-bezier(0, 0, 0.2, 1);
-  mix-blend-mode: normal;
-}
-
-/* Contact form styling */
+/* Contact page and form styling */
 
 .form-container {
   background-color: #ffe8d6;
@@ -589,6 +508,80 @@ and settled on a set that I am happy with */
   cursor: pointer;
 }
 
+/* Gallery page - Slide Show */
+.slide-container {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 1400px;
+  height: fit-content;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  margin: 0 auto;
+}
+/* Key Frames for animations */
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-to-left {
+  from {
+    transform: translateX(-4rem);
+  }
+  to {
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes slide-to-right {
+  from {
+    transform: translateX(4rem);
+  }
+  to {
+    transform: translateX(0rem);
+  }
+}
+
+/* This is the animation for the menu in mobile - allows
+the nav-links to display one at a time from top to bottom */
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 /* Media query added to improve responsiveness for mobile devices 
 smaller than 768px wide */
 
@@ -596,11 +589,12 @@ smaller than 768px wide */
   body {
     overflow-x: hidden;
   }
-
+  
+  /* Navigation for small screens less than 768px */
   .navbar {
     opacity: 1;
   }
-
+  
   .nav-links {
     position: absolute;
     right: 0px;
@@ -615,31 +609,39 @@ smaller than 768px wide */
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
   }
-
+  
+  /* Nav links do not show - Hamburger displayed*/
   .nav-links li {
     opacity: 0;
   }
+  
 
   .burger {
     display: block;
   }
 
+  /* Adjusted font-size for smaller devices */
   .main-title {
     font-size: 3.25em;
   }
 
   .main-sub-title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .main-title-message {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .mobile {
     width: 100%;
   }
+  
+  .main-image img {
+    width: 100%;
+  }
 
+  /* About page - remove images*/
   .mid-section img {
     display: none;
   }
@@ -648,6 +650,7 @@ smaller than 768px wide */
     font-size: 2.5rem;
   }
 
+  /* footer set to single column */
   .grid-container {
     grid-template-columns: 1fr;
   }
@@ -670,23 +673,6 @@ smaller than 768px wide */
     margin: 0 auto;
   }
 
-  /* About Page*/
-  .grid-container-bottom {
-    grid-template-columns: repeat(1, 1fr);
-    /* justify-content: space-between;
-    gap: 50px; */
-  }
-
-  .grid-container-bottom-image {
-    height: 100%;
-    width: 100%;
-  }
-
-  .grid-container-bottom-image img {
-    height: 100%;
-    width: 100%;
-  }
-
   .container-menu {
     flex-direction: column;
   }
@@ -705,70 +691,11 @@ smaller than 768px wide */
     left: 50%;
   }
 
+  .ourTeam-profiles {
+    justify-content: center;
+  }
+
   .nav-active {
     transform: translateX(0%);
   }
-}
-
-/* This is the animation for the menu in mobile - allows
-the nav-links to display one at a time from top to bottom */
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-
-/* This allows the animation of the hamburger - changes from hamburger
-to an X */
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2 {
-  opacity: 0;
-}
-
-.toggle .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
-}
-
-.video {
-  position: relative;
-  overflow: hidden;
-  height: 0;
-  padding-bottom: 56%;
-}
-
-.video > iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-.slide-container {
-  width: 100%;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.swiper {
-  width: 95%;
-  height: fit-content;
-}
-
-.swiper-slide img {
-  width: 100%;
-  height: 80vh;
-  object-fit: cover;
-  object-position: center;
 }

@@ -34,32 +34,22 @@ navLinks.forEach((navLink) => {
   }
 });
 
-const swiper = new Swiper(".swiper", {
+
+const swiper = new Swiper('.swiper', {
   // Optional parameters
-
   loop: true,
-
-  speed: 1000,
-
   autoplay: {
     delay: 4000,
-
-    disableOnInteraction: false,
   },
-
-  // Pagination
-
+  // If we need pagination
   pagination: {
-    el: ".swiper-pagination",
-
-    clickable: true,
+    el: '.swiper-pagination',
   },
 
   // Navigation arrows
-
   navigation: {
-    nextEl: ".swiper-button-next",
-
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
+
 });
